@@ -42,21 +42,26 @@ public class RegisterServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		 response.setContentType("text/html");
 		 PrintWriter pw=response.getWriter();
-		 
+		 String name=request.getParameter("name");
+		 String username=request.getParameter("user_name");
+		 String phone=request.getParameter("phone");
 		 String email=request.getParameter("email");
 		 String password=request.getParameter("password");
-		 String location=request.getParameter("location");
+		 String address=request.getParameter("address");
 		 
 		 RegisterBean rb=new RegisterBean();
+		 rb.setName(name);
+		 rb.setUsername(username);
 		 rb.setEmail(email);
+		 rb.setPhone(phone);
+		 rb.setAddress(address);
 		 rb.setPassword(password);
-		 rb.setLocation(location);
 		 
 		 int status=RegisterDao.register(rb);
 		 if(status>0)
 		 {
 			 pw.print("<p><color='green'>Registerd successfully</color></p>");
-			 request.getRequestDispatcher("profile-2.html").include(request, response);
+			 request.getRequestDispatcher("index.html").include(request, response);
 		 }else
 		 {
 			 pw.println("sorry, Registered unsuccessful");

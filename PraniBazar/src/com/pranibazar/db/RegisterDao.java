@@ -27,10 +27,14 @@ public static int register(RegisterBean rb)
 	 try
 	 {
 		 Connection con=RegisterDao.geConnection();
-		 PreparedStatement pst=con.prepareStatement("insert into register_users(email,password,location)values(?,?,?)");
-		 pst.setString(1, rb.getEmail());
-		 pst.setString(2, rb.getPassword());
-		 pst.setString(3, rb.getLocation());
+		 PreparedStatement pst=con.prepareStatement("insert into user_reg(name,username,email,phone,address,password)values(?,?,?,?,?,?)");
+		 pst.setString(1, rb.getName());
+		 pst.setString(2, rb.getUsername());
+		 pst.setString(3, rb.getEmail());
+		 pst.setString(4, rb.getPhone());
+		 pst.setString(5, rb.getAddress());
+		 pst.setString(6, rb.getPassword());
+		
 		 status=pst.executeUpdate();
 		 con.close();
 		 
