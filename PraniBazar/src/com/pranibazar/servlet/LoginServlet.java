@@ -44,15 +44,29 @@ public class LoginServlet extends HttpServlet {
 		
 		String name=request.getParameter("username");
 		String pass=request.getParameter("password");
-		
-		if(LoginDao.validate(name, pass)) {
-			RequestDispatcher rd=request.getRequestDispatcher("WelcomeServlet");
-			rd.forward(request, response);
-		}else {
-			pw.print("Sorry username or password error");
-			RequestDispatcher rd=request.getRequestDispatcher("index.html");
-			rd.include(request, response);
+		if(name.equals("sohag"))
+		{
+			if(LoginDao.validateAdmin(name, pass)) {
+				RequestDispatcher rd=request.getRequestDispatcher("contact.html");
+				rd.forward(request, response);
+			}else {
+				pw.print("Sorry username or password error");
+				RequestDispatcher rd=request.getRequestDispatcher("index.html");
+				rd.include(request, response);
+			}
+		}else
+		{
+			if(LoginDao.validate(name, pass)) {
+				RequestDispatcher rd=request.getRequestDispatcher("WelcomeServlet");
+				rd.forward(request, response);
+			}else {
+				pw.print("Sorry username or password error");
+				RequestDispatcher rd=request.getRequestDispatcher("index.html");
+				rd.include(request, response);
+			}
 		}
+		
+		
 	}
 
 }

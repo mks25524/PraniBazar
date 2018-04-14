@@ -48,6 +48,7 @@ public class RegisterServlet extends HttpServlet {
 		 String email=request.getParameter("email");
 		 String password=request.getParameter("password");
 		 String address=request.getParameter("address");
+		 String adminCheck=request.getParameter("admin");
 		 
 		 RegisterBean rb=new RegisterBean();
 		 rb.setName(name);
@@ -56,17 +57,32 @@ public class RegisterServlet extends HttpServlet {
 		 rb.setPhone(phone);
 		 rb.setAddress(address);
 		 rb.setPassword(password);
-		 
-		 int status=RegisterDao.register(rb);
-		 if(status>0)
+		 if(adminCheck.equals("admin"))
 		 {
-			 pw.print("<p><color='green'>Registerd successfully</color></p>");
-			 request.getRequestDispatcher("index.html").include(request, response);
-		 }else
-		 {
-			 pw.println("sorry, Registered unsuccessful");
+			 int status=RegisterDao.registerAdmin(rb);
+			 if(status>0)
+			 {
+				 pw.print("<p><color='green'>Registerd successfully</color></p>");
+				 request.getRequestDispatcher("details.html").include(request, response);
+			 }else
+			 {
+				 pw.println("sorry, Registered unsuccessful");
+			 }
+			 pw.close(); 
+		 }else {
+			 int status=RegisterDao.register(rb);
+			 if(status>0)
+			 {
+				 pw.print("<p><color='green'>Registerd successfully</color></p>");
+				 request.getRequestDispatcher("index.html").include(request, response);
+			 }else
+			 {
+				 pw.println("sorry, Registered unsuccessful");
+			 }
+			 pw.close();
 		 }
-		 pw.close();
+		 
+		
 	}
 
 }
