@@ -1,4 +1,4 @@
-package com.pranibazar.servlet;
+package com.pranibazar.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
