@@ -24,6 +24,15 @@ public ProductBean( String pid, String pname, String pcatagory, String pquantity
 	this.price = price;
 	this.pimage = pimage;
 }
+
+public ProductBean(String pid, String pname, String pcatagory, String pquantity, double price) {
+	super();
+	this.pid = pid;
+	this.pname = pname;
+	this.pcatagory = pcatagory;
+	this.pquantity = pquantity;
+	this.price = price;
+}
 public String getPid() {
 	return pid;
 }
