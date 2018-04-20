@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
 import com.pranibazar.bean.ProductBean;
@@ -45,8 +46,13 @@ public class AddProductServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		 response.setContentType("text/html");
+		response.setContentType("text/html");
 		 PrintWriter pw=response.getWriter();
+		 HttpSession session=request.getSession(false);  
+	        if(session!=null){ 
+	        
+	        String name=(String)session.getAttribute("name");  
+		 
 		 String pid=request.getParameter("product_id");
 		 String pname=request.getParameter("product_name");
 		 String pcatagory=request.getParameter("product_categorie");
@@ -75,6 +81,9 @@ public class AddProductServlet extends HttpServlet {
 			 }
 			 pw.close();
 			
-	}
+	}else
+		{pw.print("Please login first");  
+        request.getRequestDispatcher("login.html").include(request, response);  
+        }}
 
 }

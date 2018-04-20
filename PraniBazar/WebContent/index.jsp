@@ -39,7 +39,7 @@
           <div class="oferta_details">
             <div class="oferta_title">Samsung GX 2004 LM</div>
             <div class="oferta_text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </div>
-            <a href="details.html" class="details">details</a> </div>
+            <a href="details.jsp" class="details">details</a> </div>
         </div>
         <div class="oferta_pagination"> <span class="current">1</span> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> </div>
       </div>
@@ -88,8 +88,8 @@
       
       <div class="border_box">
      
-        <div class="product_title"><a href="details.html">Lovebird</a></div>
-        <div class="product_img"><a href="details.html"><img src="images/love.jpg" alt="" border="0" /></a></div>
+        <div class="product_title"><a href="details.jsp">Lovebird</a></div>
+        <div class="product_img"><a href="details.jsp"><img src="images/love.jpg" alt="" border="0" /></a></div>
         <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
       </div>
       <div class="title_box">Newsletter</div>
@@ -113,13 +113,15 @@
 					<div class="prod_box">
         <div class="top_prod_box"></div>
         <div class="center_prod_box">
-          <div class="product_title"><a href="details.html"><%= si.getPname()%></a></div>
-          <div class="product_img"><a href="details.html"><img src="GetImage?pname=<%=si.getPname()%>"  alt="" border="0" /></a></div>
+          <div class="product_title"><%= si.getPname()%></a></div>
+          <div class="product_img"></a><a href="ShowProductDetails?pname=<%=si.getPname() %>&pid=<%=si.getPid() %>&pcatagory=<%=si.getPcatagory() %>&pquantity=<%=si.getPquantity() %>&price=<%=si.getPrice() %>" ><img src="GetImage?pname=<%=si.getPname()%>"  alt="" border="0" width=100 height=100 /></a></div>
           <div class="prod_price"> <span class="price"><%= si.getPrice() %></span></div>
         </div>
+        
         <div class="bottom_prod_box"></div>
-        <div class="prod_details_tab"> <a href="#" title="header=[Add to cart] body=[&nbsp;] fade=[on]"><img src="images/cart.gif" alt="" border="0" class="left_bt" /></a> <a href="#" title="header=[Specials] body=[&nbsp;] fade=[on]"><img src="images/favs.gif" alt="" border="0" class="left_bt" /></a> <a href="#" title="header=[Gifts] body=[&nbsp;] fade=[on]"><img src="images/favorites.gif" alt="" border="0" class="left_bt" /></a> <a href="details.html" class="prod_details">details</a> </div>
+        <div class="prod_details_tab"> <a href="#" title="header=[Add to cart] body=[&nbsp;] fade=[on]"><img src="images/cart.gif" alt="" border="0" class="left_bt" /></a> <a href="#" title="header=[Specials] body=[&nbsp;] fade=[on]"><img src="images/favs.gif" alt="" border="0" class="left_bt" /></a> <a href="#" title="header=[Gifts] body=[&nbsp;] fade=[on]"><img src="images/favorites.gif" alt="" border="0" class="left_bt" /></a> <a href="ShowProductDetails?pname=<%=si.getPname() %>&pid=<%=si.getPid() %>&pcatagory=<%=si.getPcatagory() %>&pquantity=<%=si.getPquantity() %>&price=<%=si.getPrice() %>" class="prod_details">details</a> </div>
       </div>
+      
 					<% 
 			
 				
@@ -143,8 +145,8 @@
       </div>
       <div class="title_box">What’s new</div>
       <div class="border_box">
-        <div class="product_title"><a href="details.html">Motorola 156 MX-VL</a></div>
-        <div class="product_img"><a href="details.html"><img src="images/p2.gif" alt="" border="0" /></a></div>
+        <div class="product_title"><a href="details.jsp">Motorola 156 MX-VL</a></div>
+        <div class="product_img"><a href="details.jsp"><img src="images/p2.gif" alt="" border="0" /></a></div>
         <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
       </div>
       <div class="title_box">Manufacturers</div>
