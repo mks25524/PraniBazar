@@ -54,7 +54,7 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("name", name);
 			request.getRequestDispatcher("btlogout.html").include(request, response);
 
-				RequestDispatcher rd=request.getRequestDispatcher("admin.html");
+				RequestDispatcher rd=request.getRequestDispatcher("admin.jsp");
 				rd.forward(request, response);
 			}else {
 				pw.print("Sorry username or password error");
@@ -71,7 +71,7 @@ public class LoginServlet extends HttpServlet {
 				rd.forward(request, response);
 			}else {
 				pw.print("Sorry username or password error");
-				RequestDispatcher rd=request.getRequestDispatcher("index.html");
+				RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
 				rd.include(request, response);
 			}
 		}
