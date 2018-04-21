@@ -3,9 +3,10 @@ package com.pranibazar.controller;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
+import java.sql.Connection;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,20 +16,21 @@ import javax.servlet.http.Part;
 
 import com.pranibazar.bean.ProductBean;
 import com.pranibazar.db.ProductDao;
-import com.pranibazar.db.RegisterDao;
+import com.pranibazar.db.ProductDaoImpl;
+import com.pranibazar.db.ProductDetailsDao;
+
 
 /**
- * Servlet implementation class AddProductServlet
+ * Servlet implementation class UpdateProductAdmlin
  */
-@WebServlet("/AddProductServlet")
-@MultipartConfig
-public class AddProductServlet extends HttpServlet {
+@WebServlet("/UpdateProductAdmin")
+public class UpdateProductAdmin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AddProductServlet() {
+    public UpdateProductAdmin() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -69,21 +71,25 @@ public class AddProductServlet extends HttpServlet {
 			pb.setPquantity(pquantity);
 			pb.setPrice(price);
 			pb.setPimage(inputStream);
-			 int status=ProductDao.addProduct(pb);
-			 if(status>0)
+			ServletContext sc=getServletContext();
+			Connection con=(Connection)sc.getAttribute("connDB");
+			ProductDetailsDao birdid=new ProductDaoImpl(con);
+			 int status=birdid.update(pb);
+			 if(status==1)
 			 {
-				 pw.print("<p><color='green'>Product added successfully</color></p>");
-				 request.getRequestDispatcher("admin.jsp").include(request, response);
+				 pw.print("<p><color='green'>Product Updated successfully</color></p>");
+				 request.getRequestDispatcher("adminUpdateProduct.jsp").include(request, response);
 			 }else
 			 {
 				 pw.println("sorry, Product adding unsuccessful.Please try again");
-				 request.getRequestDispatcher("AddProduct.html").include(request, response);
+				 request.getRequestDispatcher("adminUpdateProduct.jsp").include(request, response);
 			 }
 			 pw.close();
 			
 	}else
 		{pw.print("Please login first");  
-        request.getRequestDispatcher("login.html").include(request, response);  
-        }}
+       request.getRequestDispatcher("login.html").include(request, response);  
+       }
+	}
 
 }

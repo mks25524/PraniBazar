@@ -6,8 +6,8 @@ import com.pranibazar.bean.ProductBean;
 
 
 public interface ProductDetailsDao {
-	public int insert(ProductBean stuinfo);
-	public int update(ProductBean stuinfo);
+	public int insert(ProductBean birdinfo);
+	public int update(ProductBean birdinfo);
 	public List<ProductBean> getAllProduct();
 	public boolean getByCatagory(String catagory);
 	public int delete(String Pid);

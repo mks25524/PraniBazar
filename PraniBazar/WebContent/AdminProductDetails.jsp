@@ -34,7 +34,8 @@
 						<td><%= si.getPrice()%></td>
 						
 						<td><img alt="img" src="GetImage?pname=<%=si.getPname() %>" width=100 height=100></td>
-						<td><a href="">Update</a> </td>
+						<td><a href="adminUpdateProduct.jsp?pid=<%=si.getPid()%>">Update</a> </td>
+						<td><a href="DeleteAdminProduct?pid=<%=si.getPid()%>">Delete</a> </td>
 					</tr>
 					<% 
 				}
