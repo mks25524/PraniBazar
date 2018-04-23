@@ -67,7 +67,7 @@ public class LoginServlet extends HttpServlet {
 				pw.print("welcome"+name);
 				HttpSession session=request.getSession();
 				session.setAttribute("name", name);
-				RequestDispatcher rd=request.getRequestDispatcher("WelcomeServlet");
+				RequestDispatcher rd=request.getRequestDispatcher("userProfile.jsp");
 				rd.forward(request, response);
 			}else {
 				pw.print("Sorry username or password error");

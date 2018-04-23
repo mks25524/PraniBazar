@@ -116,10 +116,11 @@
              Price: <span class="blue"><%=request.getParameter("price") %>$</span><br />
             </div>
             <div class="prod_price_big"> <span class="price"><%=request.getParameter("price") %>$</span></div>
-            <a href="#" class="addtocart">add to cart</a> <a href="#" class="compare">compare</a> </div>
+            <a href="purchase.jsp?pnames=<%=request.getParameter("pname") %>&pid=<%=request.getParameter("pid") %>&pcatagory=<%=request.getParameter("pcatagory") %>&price=<%=request.getParameter("price") %>&pquantity=<%=request.getParameter("pquantity") %>" class="addtocart">Buy</a>  </div>
         </div>
         <div class="bottom_prod_box_big"></div>
       </div>
+    
       <div class="center_title_bar">Similar products</div>
        <%
 				List<ProductBean> list=(List)request.getAttribute("productlistdetails");
@@ -139,7 +140,7 @@
         </div>
         
         <div class="bottom_prod_box"></div>
-        <div class="prod_details_tab"> <a href="#" title="header=[Add to cart] body=[&nbsp;] fade=[on]"><img src="images/cart.gif" alt="" border="0" class="left_bt" /></a> <a href="#" title="header=[Specials] body=[&nbsp;] fade=[on]"><img src="images/favs.gif" alt="" border="0" class="left_bt" /></a> <a href="#" title="header=[Gifts] body=[&nbsp;] fade=[on]"><img src="images/favorites.gif" alt="" border="0" class="left_bt" /></a> <a href="ShowProductDetails?pname=<%=si.getPname() %>&pid=<%=si.getPid() %>&pcatagory=<%=si.getPcatagory() %>&pquantity=<%=si.getPquantity() %>&price=<%=si.getPrice() %>" class="prod_details">details</a> </div>
+        <div class="prod_details_tab"> <a href="#" title="header=[Buy] body=[&nbsp;] fade=[on]"><img src="images/cart.gif" alt="" border="0" class="left_bt" /></a> <a href="#" title="header=[Specials] body=[&nbsp;] fade=[on]"><img src="images/favs.gif" alt="" border="0" class="left_bt" /></a> <a href="#" title="header=[Gifts] body=[&nbsp;] fade=[on]"><img src="images/favorites.gif" alt="" border="0" class="left_bt" /></a> <a href="ShowProductDetails?pname=<%=si.getPname() %>&pid=<%=si.getPid() %>&pcatagory=<%=si.getPcatagory() %>&pquantity=<%=si.getPquantity() %>&price=<%=si.getPrice() %>" class="prod_details">details</a> </div>
       </div>
       
 					<% 
