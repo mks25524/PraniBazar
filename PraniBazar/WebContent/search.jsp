@@ -81,8 +81,7 @@
         <li class="odd"><a href="#">Pigeon</a></li>
         <li class="even"><a href="#">Parrot</a></li>
         <li class="odd"><a href="#">Peacock</a></li>
-        <% String name="owl" ;%>
-        <li class="odd"><a href="SearchProduct?pcatagory=<%=name%>">Owl</a></li>
+        <li class="odd"><a href="#">Owl</a></li>
         <li class="even"><a href="#">Toucan</a></li>
       </ul>
       <div class="title_box">Special Products</div>

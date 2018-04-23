@@ -37,7 +37,7 @@
                         <div class="col-xs-6 col-md-6">
                           <a href="AddProduct.html" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-plus"></span> <br/>Add Product</a>
                           <a href="ViewAdminProductList" class="btn btn-warning btn-lg" role="button"><span class="glyphicon glyphicon-bookmark"></span> <br/>ProductList</a>
-                          <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-signal"></span> <br/>Reports</a>
+                          <a href="ShowPurchaseDetailsAdmin" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-signal"></span> <br/>Order List</a>
                           <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-comment"></span> <br/>Comments</a>
                         </div>
                         <div class="col-xs-6 col-md-6">
