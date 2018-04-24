@@ -51,7 +51,7 @@
     <div id="menu_tab">
       <div class="left_menu_corner"></div>
       <ul class="menu">
-        <li><a href="index.jsp" class="nav1"> Home</a></li>
+        <li><a href="ShowProduct" class="nav1"> Home</a></li>
         <li class="divider"></li>
         <li><a href="#" class="nav2">Products</a></li>
         <li class="divider"></li>
@@ -137,37 +137,19 @@
       </div>
     </div>
     <!-- end of center content -->
-    <div class="right_content">
-      <div class="shopping_cart">
-        <div class="cart_title">Shopping cart</div>
-        <div class="cart_details"> 3 items <br />
-          <span class="border_cart"></span> Total: <span class="price">350$</span> </div>
-        <div class="cart_icon"><a href="#" title="header=[Checkout] body=[&nbsp;] fade=[on]"><img src="images/shoppingcart.png" alt="" width="48" height="48" border="0" /></a></div>
-      </div>
-      <div class="title_box">What’s new</div>
-      <div class="border_box">
-        <div class="product_title"><a href="details.jsp">Motorola 156 MX-VL</a></div>
-        <div class="product_img"><a href="details.jsp"><img src="images/p2.gif" alt="" border="0" /></a></div>
+     <div class="border_box">
+     
+        <div class="product_title"><a href="details.jsp">Lovebird</a></div>
+        <div class="product_img"><a href="details.jsp"><img src="images/love.jpg" alt="" border="0" /></a></div>
         <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
       </div>
-      <div class="title_box">Manufacturers</div>
-      <ul class="left_menu">
-        <li class="odd"><a href="#">Sony</a></li>
-        <li class="even"><a href="#">Samsung</a></li>
-        <li class="odd"><a href="#">Daewoo</a></li>
-        <li class="even"><a href="#">LG</a></li>
-        <li class="odd"><a href="#">Fujitsu Siemens</a></li>
-        <li class="even"><a href="#">Motorola</a></li>
-        <li class="odd"><a href="#">Phillips</a></li>
-        <li class="even"><a href="#">Beko</a></li>
-      </ul>
       <div class="banner_adds"> <a href="#"><img src="images/bann1.jpg" alt="" border="0" /></a> </div>
     </div>
     <!-- end of right content -->
   </div>
   <!-- end of main content -->
   <div class="footer">
-    <div class="left_footer"> <img src="images/footer_logo.png" alt="" width="170" height="49"/> </div>
+    <div class="left_footer"> <img src="images/w.JPG" alt="" width="170" height="49"/> </div>
     <div class="center_footer"> Template name. All Rights Reserved 2008<br />
       <a href="http://csscreme.com"><img src="images/csscreme.jpg" alt="csscreme" border="0" /></a><br />
       <img src="images/payment.gif" alt="" /> </div>

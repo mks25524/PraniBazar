@@ -13,22 +13,24 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.pranibazar.bean.ProductBean;
-
+import com.pranibazar.bean.PurchaseBean;
 import com.pranibazar.db.ProductDaoImpl;
 import com.pranibazar.db.ProductDetailsDao;
+import com.pranibazar.db.PurchaseDao;
+import com.pranibazar.db.PurchaseDaoImpl;
 
 
 /**
  * Servlet implementation class ShowProduct
  */
-@WebServlet("/SearchProduct")
-public class SearchProduct extends HttpServlet {
+@WebServlet("/ShowPurchaseDetailsUser")
+public class ShowPurchaseDetailsUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SearchProduct() {
+    public ShowPurchaseDetailsUser() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -40,13 +42,12 @@ public class SearchProduct extends HttpServlet {
 		// TODO Auto-generated method stub
 				ServletContext sc=getServletContext();
 				Connection con=(Connection)sc.getAttribute("connDB");
-				ProductDetailsDao pname=new ProductDaoImpl(con);
-				String s=request.getParameter("pcatagory");
-				List<ProductBean> productlist=pname.getByCatagory(s);
+				PurchaseDao pname=new PurchaseDaoImpl(con);
+				List<PurchaseBean> purchaselist=pname.getAllRecord();
 				//PrintWriter pw=response.getWriter();
 				
-				request.setAttribute("search", productlist);
-				request.getRequestDispatcher("search.jsp").forward(request, response);
+				request.setAttribute("purchasedetails", purchaselist);
+				request.getRequestDispatcher("UserPurchaseDetails.jsp").forward(request, response);
 	}
 
 	/**

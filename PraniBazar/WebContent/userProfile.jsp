@@ -28,13 +28,13 @@
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">
-                        <span class="glyphicon glyphicon-bookmark"></span> Quick Shortcuts</h3>
+                        <span class="glyphicon glyphicon-bookmark"></span> User Profile</h3>
                 </div>
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-xs-6 col-md-6">
-                          <a href="AddProduct.html" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-plus"></span> <br/>Add Product</a>
-                          <a href="ViewAdminProductList" class="btn btn-warning btn-lg" role="button"><span class="glyphicon glyphicon-bookmark"></span> <br/>ProductList</a>
+                          <a href="" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-plus"></span> <br/>Add Product</a>
+                          <a href="ShowPurchaseDetailsUser" class="btn btn-warning btn-lg" role="button"><span class="glyphicon glyphicon-bookmark"></span> <br/>Purchase History</a>
                           <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-signal"></span> <br/>Reports</a>
                           <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-comment"></span> <br/>Comments</a>
                         </div>

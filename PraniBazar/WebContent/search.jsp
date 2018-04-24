@@ -102,7 +102,7 @@
     <div class="center_content">
       <div class="center_title_bar">Latest Products</div>
   <%
-				List<ProductBean> list=(List)request.getAttribute("productlist");
+				List<ProductBean> list=(List)request.getAttribute("search");
 
 				for(ProductBean si:list)
 				//for(int i=0;i<list.size();i++)
